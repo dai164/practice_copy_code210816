@@ -1,0 +1,545 @@
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: Verdana,Arial,Helvetica,'meirio','メイリオ','Hiragino Maru Gothic Pro','ヒラギノ丸ゴ Pro W4',Osaka,'ＭＳ Ｐゴシック',sans-serif;
+  text-decoration: none;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+/*  */
+
+body {
+  width: 100%;
+  height: auto;
+  border-top: solid 8px #6CC6C4;
+  background-color: #F6F6F6;
+}
+
+header {
+  width: 920px;
+  height: 130px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header img {
+  padding-top: 50px;
+}
+
+.header-right {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 230px;
+  height: auto;
+  text-align: center;
+}
+
+.sub-title {
+  padding: 0 0 20px 0;
+}
+
+.sub-title, .time {
+  width: 100%;
+  font-size: 10px;
+}
+
+.tel {
+  font-size: 25px;
+  background: url("bgTel.png") no-repeat;
+  padding-left: 25px;
+}
+
+.time {
+  border: solid 1px #D6D6D6;
+  margin-top: 10px;
+  padding: 10px 0;
+}
+
+.time span {
+  color: red;
+}
+
+.top-menu {
+  width: 920px;
+  height: 70px;
+  margin: 0 auto;
+  border: solid 1px #6CC6C4;
+  border-radius: 6px;
+}
+
+.top-menu ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
+  height: 100%;
+}
+
+.top-menu li {
+  width: 100%;
+  height: 100%;
+}
+
+.menu2, .menu3, .menu4, .menu5 {
+  border-left: solid 1px #6CC6C4;
+}
+
+.top-menu a {
+  display: inline-block;
+  height: 34px;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #6cc6c4;
+}
+
+.top-menu a:hover {
+  background-image: -webkit-gradient(linear,50% -1%,50% 101%,color-stop(0, rgb(108,198,196)),color-stop(1, rgb(156,227,225)));
+  color: #C1FFFD;
+}
+
+.top-menu p {
+  line-height: 20px;
+}
+
+.top-menu span {
+  font-size: 10px;
+}
+
+.index {
+  width: 920px;
+  margin: 0 auto;
+  font-size: 10px;
+  padding-top: 20px;
+}
+
+.index a {
+  color: #4D82C4;
+  text-decoration: underline;
+}
+
+.center {
+  width: 920px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.side-menu {
+  height: 700px;
+  width: 260px;
+  /* margin-left: 94px; */
+  font-weight: bold;
+  /* position: relative; */
+}
+
+.side-menu ul {
+  padding-left: 10px;
+}
+
+.side-menu h2 {
+  padding-left: 10px;
+  background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+  border-bottom: #6CC6C4 solid 1px;
+}
+
+.side-menu a {
+  font-size: 14px;
+  line-height: 40px;
+  color:#595959;
+}
+
+.side-menu1, .side-menu2 {
+  height: 230px;
+  width: 260px;
+  background-color: #ffffff;
+  border: solid 1px #6CC6C4;
+  border-radius: 6px 6px 0px 0px;
+  margin-top: 20px;
+}
+
+.side-menu1 a:hover {
+  color: #6CC6C4;
+}
+
+.side-menu2 a:hover {
+  color: #AEC24C;
+}
+
+.side-menu li {
+  width: 200px;
+	padding-left:25px;
+  background: url(https://haniwaman.com/sample/part3/template_08/common/images/bgListIcon01.png) no-repeat 5px center;
+  border-bottom: #6CC6C4 solid 1px;
+}
+
+.main {
+  width: 640px;
+  height: auto;
+  margin-top: 20px;
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 500px; */
+}
+
+.main h2 {
+  box-sizing: border-box;
+  /* display: block; */
+  width: 100%;
+  height: 100px;
+  padding-top: 45px;
+  padding-left: 20px;
+  background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
+  font-size: 19.5px;
+  /* line-height: 40px; */
+  color: #fff;
+  border: #6CC6C4 solid 1px;
+  border-radius: 6px 6px 0 0;
+}
+
+.information {
+  width: 640px;
+  height: auto;
+  background-color: white;
+  /* margin-top: 10px; */
+  font-size: 13px;
+  /* float: left; */
+  color: #515151;
+}
+
+.information h3 {
+  font-size: 16px;
+  margin: 0 20px 20px 20px;
+  padding: 30px 0 17px 0;
+  border-bottom: solid 3px #6CC6C4;
+  font-weight: bold;
+}
+
+.information h4 {
+  color: #6CC6C4;
+  font-size: 15px;
+  padding-left: 25px;
+  font-weight: bold;
+}
+
+.information ul {
+  margin-left: 30px;
+}
+
+.information li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px #CCCCCC dotted;
+  width: 580px;
+}
+
+.information span {
+  /* margin-left: 30px; */
+  padding-top: 5px;
+  font-weight: bold;
+  width: 140px;
+  height: 50px;
+  float: left;
+  display: inline-block;
+}
+
+.information p {
+  box-sizing: border-box;
+  padding: 20px 30px 10px 25px;
+  width: 100%;
+  /* height: 50px; */
+  line-height: 23px;
+}
+
+table {
+  box-sizing: border-box;
+  width: 94%;
+  /* padding: 0 5%; */
+  margin: 0 auto;
+  border: solid #999 1px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+table th {
+  background-color: #D1D1D1;
+}
+
+table th, table td {
+  text-align: center;
+  border: solid #999 1px;
+  padding: 10px;
+}
+
+table tr {
+  line-height: 25px;
+}
+
+.sub-information {
+  color: #515151;
+  font-size: 13px;
+  width: 94%;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.sub-information span {
+  box-sizing: border-box;
+  float: left;
+  padding: 0;
+  height: auto;
+  width: auto;
+  padding-top: 6px;
+  padding-right: 15px;
+}
+
+.sub-information p {
+  padding: 0 0 20px 0;
+  height: auto;
+}
+
+footer {
+  width: 920px;
+  height: 130px;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+.footer-menu {
+  width: 100%;
+  height: 30px;
+  /* background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%); */
+  background-color: #6CC6C4;
+  border-radius: 6px;
+}
+
+.footer-menu ul {
+  display: flex;
+  padding-left: 15px;
+}
+
+.footer-menu a {
+  /* display: inline-block; */
+}
+
+.footer-menu p {
+  background: url(https://haniwaman.com/sample/part3/template_08/common/images/bgFooterIcon.png) left center no-repeat;
+  padding: 8.5px 20px 8.5px 25px;
+  font-size: 13px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.footer-menu p:hover {
+  text-decoration: underline;
+}
+
+footer h3 {
+  font-size: 13px;
+  color: #515151;
+  text-align: right;
+  /* position: absolute; */
+  /* top: 15px; */
+  /* right: 0; */
+  padding: 15px 0;
+}
+
+footer h4 {
+  font-size: 12px;
+  color: #515151;
+  text-align: center;
+  border-top: solid 2px #6CC6C4;
+  padding: 20px 0;
+}
+
+/*  */
+
+@media(max-width: 769px) {
+  header {
+    width: 100%;
+    height: auto;
+    /* margin: 0 auto; */
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  header img {
+    padding: 0 ;
+  }
+  .header-right {
+    /* text-align: center; */
+    color: #515151;
+    margin: 0 auto;
+    position: static;
+    height: auto;
+  }
+  .sub-title {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .time {
+    margin-bottom: 10px;
+  }
+  .top-menu {
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+  .top-menu ul {
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #F6F6F6;
+    background-image: none;
+  }
+  .top-menu li {
+    /* flex: auto; */
+    box-sizing: border-box;
+    width: 50%;
+    background-image: linear-gradient(rgb(156,227,225) 0%,rgb(108,198,196) 100%);
+    border-radius: 6px;
+    border: solid 1px #6CC6C4;
+  }
+  .index {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .center {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 3%;
+    height: auto;
+    flex-direction: column;
+  }
+  .side-menu {
+    order: 1;
+  }
+  .side-menu, .main, .information {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .side-menu1, .side-menu2, footer {
+    width: 100%;
+    height: auto;
+  }
+  .side-menu1 ul, .side-menu2 ul {
+    margin-bottom: 20px;
+  }
+  .side-menu1 li, .side-menu2 li {
+    width: 90%;
+  }
+  .main h2 {
+    height: 55px;
+    padding-top: 20px;
+  }
+  .main-image img {
+    width: 100%;
+  }
+  .information ul {
+    margin-right: 20px;
+   }
+  .information li {
+    width: 100%;
+  }
+  .information span {
+    float: none;
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .information p {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;    
+  }
+  .footer-menu {
+    box-sizing: border-box;
+    width: 94%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .footer-menu ul {
+    flex-wrap: wrap;
+  }
+  footer h3 {
+    padding-right: 3%;
+    line-height: 25px;
+    padding-bottom: 0;
+  }
+}
+
+/* 599以上の時は改行をキャンセル */
+@media screen and (min-width: 769px){	
+  .br-sp { 
+    display:none;
+  }
+}
